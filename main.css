@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+}
+
+section {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+}
+
+.containerDiv {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: 300px 300px;
+      grid-template-columns: 300px 300px;
+  grid-gap: 20px;
+}
+
+.containerDiv div {
+  width: 300px;
+  height: 300px;
+}
+
+.containerDiv div:nth-child(even) {
+  background-color: #686666;
+  -webkit-animation: left 0.8s 1 ease-in-out;
+          animation: left 0.8s 1 ease-in-out;
+}
+
+.containerDiv div:nth-child(odd) {
+  background-color: #ce4343;
+  -webkit-animation: right 0.8s 1 ease-in-out;
+          animation: right 0.8s 1 ease-in-out;
+}
+
+.containerDiv div.two {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.containerDiv div.three {
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+}
+
+.containerDiv div.four {
+  -webkit-animation-duration: 1.4s;
+          animation-duration: 1.4s;
+}
+
+.containerDiv div.five {
+  -webkit-animation-duration: 1.6s;
+          animation-duration: 1.6s;
+}
+
+.containerDiv div.six {
+  -webkit-animation-duration: 1.8s;
+          animation-duration: 1.8s;
+}
+
+.spin {
+  width: 100px;
+  height: 100px;
+  background: url("./images/spinner.png");
+  background-size: cover;
+  -webkit-animation: rotate 0.8s infinite linear;
+          animation: rotate 0.8s infinite linear;
+}
+
+.spin.emoji {
+  background: url("./images/excited.png");
+  background-size: cover;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+}
+
+a:active {
+  color: #ce4343;
+}
+
+a:visited {
+  color: green;
+}
+
+input:enabled {
+  background-color: blue;
+}
+
+.orange {
+  color: orange;
+  width: 20px;
+}
+
+@-webkit-keyframes left {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes left {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=main.css.map */

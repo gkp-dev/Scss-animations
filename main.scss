@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+$base-color: rgb(104,
+102,
+102);
+$red-color: rgb(206,
+67,
+67);
+$poppins: 'Poppins',
+sans-serif;
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $poppins;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+
+//Container
+section {
+    display: grid;
+    justify-content: center;
+    padding: 20px;
+}
+
+//Main Container
+.containerDiv {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 300px 300px;
+    grid-gap: 20px;
+    div {
+        width: 300px;
+        height: 300px;
+        &:nth-child(even) {
+            background-color: $base-color;
+            animation: left 0.8s 1 ease-in-out;
+        }
+        &:nth-child(odd) {
+            background-color: $red-color;
+            animation: right 0.8s 1 ease-in-out;
+        }
+        &.two {
+            animation-duration: 1s
+        }
+        &.three {
+            animation-duration: 1.2s
+        }
+        &.four {
+            animation-duration: 1.4s
+        }
+        &.five {
+            animation-duration: 1.6s
+        }
+        &.six {
+            animation-duration: 1.8s
+        }
+    }
+}
+
+//Spinner
+.spin {
+    width: 100px;
+    height: 100px;
+    background: url('./images/spinner.png');
+    background-size: cover;
+    animation: rotate 0.8s infinite linear;
+    &.emoji {
+        background: url('./images/excited.png');
+        background-size: cover;
+        animation-duration: 1.2s;
+    }
+}
+
+a:active {
+    color: $red-color;
+}
+
+a:visited {
+    color: green;
+}
+
+input:enabled {
+    background-color: blue;
+}
+
+.orange {
+    color: orange;
+    width: 20px;
+}
+
+//Keyframes
+@keyframes left {
+    0% {
+        opacity: 0;
+        transform: translateX(0px);
+    }
+    50% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes right {
+    0% {
+        opacity: 0;
+        transform: translateX(0px);
+    }
+    50% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
